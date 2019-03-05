@@ -25,7 +25,7 @@ SECRET_KEY = SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY' , 'ald)8d8j-ztwp*kr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-
+WSGI_APPLICATION = 'blogproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
